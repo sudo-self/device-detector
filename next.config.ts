@@ -1,13 +1,14 @@
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: "export",
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
   basePath: "/device-detector",
+  trailingSlash: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
+
 
 
