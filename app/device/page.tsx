@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import DeviceClient from "./DeviceClient";
 
@@ -6,7 +6,6 @@ const DevicePage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gray-200 dark:bg-gray-900 py-8">
       <div className="w-full max-w-4xl bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-6 space-y-6">
-    
         <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 w-full mb-6 px-4">
           <h4 className="text-2xl sm:text-3xl font-extrabold text-cyan-700 dark:text-cyan-700 select-none flex items-center gap-2">
             <Image
@@ -25,10 +24,10 @@ const DevicePage = () => {
           </h4>
         </header>
 
+        <Suspense fallback={<p>Loading device info...</p>}>
+          <DeviceClient />
+        </Suspense>
 
-        <DeviceClient />
-
-   
         <footer className="pt-6 border-t border-gray-200 dark:border-gray-700 text-center space-y-2">
           <p className="text-sm text-emerald-700">
             <a
@@ -69,6 +68,7 @@ const DevicePage = () => {
 };
 
 export default DevicePage;
+
 
 
 
