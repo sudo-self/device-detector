@@ -25,10 +25,10 @@ const DevicePage = () => {
           </h4>
         </header>
 
-        {/* Main report */}
+
         <DeviceClient />
 
-        {/* Footer inside phone */}
+   
         <footer className="pt-6 border-t border-gray-200 dark:border-gray-700 text-center space-y-2">
           <p className="text-sm text-emerald-700">
             <a
