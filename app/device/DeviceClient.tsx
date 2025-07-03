@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import DeviceReport from "../../components/DeviceReport";
+import DeviceReport from "../components/DeviceReport";
 
 const DeviceClient = () => {
   const searchParams = useSearchParams();
