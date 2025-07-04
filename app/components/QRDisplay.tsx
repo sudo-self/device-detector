@@ -47,7 +47,7 @@ const QRDisplay = () => {
       {qrVisible && (
         <div className="mt-1 flex flex-col items-center">
           <div className="p-0 m-0">
-            <QRCodeCanvas value={qrUrl} size={72} />
+            <QRCodeCanvas value={qrUrl} size={128} />
           </div>
           <p className="text-xs text-gray-700 dark:text-gray-400 mt-1">view device</p>
         </div>
